@@ -19,7 +19,6 @@
 // This means that missing docs will still fail CI, but means we can use
 // README.md as the crate documentation.
 #![cfg_attr(feature = "nightly", deny(missing_docs))]
-
 #![cfg_attr(feature = "nightly", doc(include = "../README.md"))]
 #![doc(html_logo_url = "https://doc.dalek.rs/assets/dalek-logo-clear.png")]
 
@@ -47,6 +46,9 @@ pub extern crate digest;
 extern crate rand_core;
 #[cfg(all(test, feature = "stage2_build"))]
 extern crate rand_os;
+
+#[cfg(feature = "fiat_u64_backend")]
+extern crate curve25519_fiat;
 
 // Used for traits related to constant-time code.
 extern crate subtle;
