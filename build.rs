@@ -30,6 +30,9 @@ use std::path::Path;
 #[cfg(feature = "serde")]
 extern crate serde;
 
+#[cfg(feature = "fiat_u64_backend")]
+extern crate curve25519_fiat;
+
 // Macros come first!
 #[path = "src/macros.rs"]
 #[macro_use]
@@ -82,6 +85,9 @@ use backend::serial::u32::field::FieldElement2625;
 
 #[cfg(feature = \"u64_backend\")]
 use backend::serial::u64::field::FieldElement51;
+
+#[cfg(feature = \"fiat_u64_backend\")]
+use backend::serial::fiat::field::FieldElement51;
 
 use edwards::EdwardsBasepointTable;
 
