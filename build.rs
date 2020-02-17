@@ -31,7 +31,7 @@ use std::path::Path;
 extern crate serde;
 
 #[cfg(feature = "fiat_u64_backend")]
-extern crate curve25519_fiat;
+extern crate fiat_crypto;
 
 // Macros come first!
 #[path = "src/macros.rs"]
