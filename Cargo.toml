@@ -40,7 +40,7 @@ rand_core = { git = "https://github.com/mesalock-linux/rand-sgx.git", tag = "sgx
 byteorder = { version = "^1.2.3", default-features = false, features = ["i128"] }
 digest = { version = "0.8", default-features = false }
 subtle = { version = "^2.2.1", default-features = false }
-serde = { git = "https://github.com/mesalock-linux/serde-sgx.git", tag = "sgx_1.1.2", feature = ["derive"] }
+serde = { git = "https://github.com/mesalock-linux/serde-sgx.git", version = "1.0", feature = ["derive"] }
 packed_simd = { version = "0.3", features = ["into_bits"], optional = true }
 zeroize = { version = "1", default-features = false }
 fiat-crypto = { version = "0.1.5", optional = true}
